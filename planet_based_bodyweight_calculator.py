@@ -1,6 +1,6 @@
 # Input takes place in the terminal.
 
-x = int(input("Enter weight (kg or lb): "))
+x = int(input("Enter weight (number only): "))
 
 def weight_planet():
 
