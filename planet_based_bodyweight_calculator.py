@@ -43,11 +43,32 @@ def weight_planet():
     pluto = round(x * 0.063, 3)
     charon = round(x * 0.029, 3)
 
-    print(mercury, venus, earth, moon, mars, jupiter, io, europe, ganymede, callisto,
-          saturn, titan, iapetus, mimas, enceladus, tethys, dione, rhea,
-          uranus, miranda, ariel, umbriel, titania, oberon,
-          neptune, triton,
-          pluto, charon)
+    results = pd.DataFrame({
+        'Planet' : ['Mercury', 'Venus', 'Earth', 'Earth', 'Mars', 'Jupiter',
+                    'Jupiter', 'Jupiter', 'Jupiter', 'Jupiter','Saturn',
+                    'Saturn', 'Saturn', 'Saturn', 'Saturn', 'Saturn',
+                    'Saturn', 'Saturn', 'Uranus', 'Uranus', 'Uranus',
+                    'Uranus', 'Uranus', 'Uranus','Neptune', 'Neptune',
+                    'Pluto', 'Pluto'],
+        'Celestial Body': ['Mercury', 'Venus', 'Earth', 'Moon', 'Mars',
+                           'Jupiter', 'Io', 'Europa', 'Ganymede', 'Callisto',
+                           'Saturn', 'Titan', 'Iapetus', 'Mimas', 'Enceladus',
+                           'Tethys', 'Dione', 'Rhea',
+                           'Uranus', 'Miranda', 'Ariel', 'Umbriel',
+                           'Titania', 'Oberon',
+                           'Neptune', 'Triton',
+                           'Pluto', 'Charon'],
+        'Weight': [mercury, venus, earth, moon, mars,
+                   jupiter, io, europe, ganymede, callisto,
+                   saturn, titan, iapetus, mimas, enceladus,
+                   tethys, dione, rhea,
+                   uranus, miranda, ariel, umbriel,
+                   titania, oberon,
+                   neptune, triton,
+                   pluto, charon],
+    })
+
+    print(results)
     
 weight_planet()
 
